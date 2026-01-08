@@ -12,7 +12,7 @@ public class Main {
         }
         return lineaRep.toString();
     }
-4
+5
 
     public static void inicioPrograma() {
         System.out.println(linea());
