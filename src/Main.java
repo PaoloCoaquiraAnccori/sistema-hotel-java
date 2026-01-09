@@ -12,11 +12,11 @@ public class Main {
         }
         return lineaRep.toString();
     }
-6
+
 
     public static void inicioPrograma() {
         System.out.println(linea());
-
+        
     }
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------
