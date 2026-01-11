@@ -13,6 +13,7 @@ public class Hotel {
     private String telefono;
     private ArrayList<PersonalHotel> empleados;
     private ArrayList<Cliente> clientes;
+    private Estacionamiento estacionamiento;
 
     public Hotel(String nombre, int pisos, Dueño dueño, String direccion, String telefono){
         this.nombre = nombre;
@@ -76,6 +77,14 @@ public class Hotel {
 
     public void setClientes(ArrayList<Cliente> clientes) {
         this.clientes = clientes;
+    }
+
+    public Estacionamiento getEstacionamiento() {
+        return estacionamiento;
+    }
+
+    public void setEstacionamiento(Estacionamiento estacionamiento) {
+        this.estacionamiento = estacionamiento;
     }
 
 

@@ -26,6 +26,12 @@ public class Main {
         System.out.println("1. Iniciar sesión");
         System.out.println("2. Registrar (Clientes)");
         System.out.println("0. Salir");
+        try {
+            System.out.print("Opcion: ");
+            int opcionMenuHotel = lector.nextInt();
+        } catch (Exception e) {
+            System.out.println("Opcion no valida!!");
+        }
     }
 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------
