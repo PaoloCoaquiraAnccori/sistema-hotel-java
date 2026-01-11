@@ -23,7 +23,8 @@ public class Main {
     // *** Menus */
     public static void menuPrincipal() {
         System.out.println("Menu del Hotel");
-        System.out.println("1. Iniciar");
+        System.out.println("1. Iniciar sesión");
+        System.out.println("0. Salir");
     }
 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------
