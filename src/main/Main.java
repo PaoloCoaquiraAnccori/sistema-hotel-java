@@ -29,8 +29,10 @@ public class Main {
         String direccion = "Psj San Jose";
         String telefono = "967845193";
         //=============================================
+
         Hotel hotel1 = new Hotel(nombre, pisos, dueñoAbsoluto , direccion, telefono);
         System.out.println(hotel1.getNombre());
+        System.out.println(linea());
     }
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------
