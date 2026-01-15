@@ -18,22 +18,47 @@ public class Main {
         return lineaRep.toString();
     }
 
-    // ***********************************************************************************
-    // */
-    // *** Menus */
-    public static void menuPrincipal() {
-        System.out.println("==== Menu del Hotel ====");
-        System.out.println("1. Iniciar sesión");
-        System.out.println("2. Registrar (Clientes)");
-        System.out.println("0. Salir");
-        try {
-            System.out.print("Opcion: ");
-            int opcionMenuHotel = lector.nextInt();
-        } catch (Exception e) {
-            System.out.println("Opcion no valida!!");
-        }
+    //************************************************************************************
+    public static void iniciarSesion(){
+        System.out.print("Número de DNI:");
+        String dni = lector.nextLine();
+        System.out.print("Contraseña: ");
+        String contraseña = lector.nextLine();
     }
 
+    // ***********************************************************************************
+    // ************  MENUS   ****************************************
+    public static void menuPrincipal() {
+        boolean validarMenuPrincipal = false;
+        do {
+            System.out.println("==== Menu del Hotel ====");
+            System.out.println("1. Iniciar sesión");
+            System.out.println("2. Registrar (Clientes)");
+            System.out.println("0. Salir");
+            try {
+                System.out.print("Opcion: ");
+                int opcionMenuHotel = lector.nextInt();
+                lector.nextLine();
+                switch (opcionMenuHotel) {
+                    case 0 -> {
+                        validarMenuPrincipal = true;
+                    }
+                    case 1 -> {
+                        iniciarSesion();
+                    }
+                    case 2 -> {
+                    }
+                    default -> {
+                        System.out.println("La opcion no esta disponible.");
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("Opcion no valida!!");
+            }
+        } while (validarMenuPrincipal == false);
+    }
+
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static void inicioPrograma() {
         System.out.println(linea());
@@ -48,6 +73,7 @@ public class Main {
 
         Hotel hotel1 = new Hotel(nombre, pisos, dueñoAbsoluto, direccion, telefono);
         System.out.println(hotel1.getNombre());
+        menuPrincipal();
         System.out.println(linea());
     }
 
