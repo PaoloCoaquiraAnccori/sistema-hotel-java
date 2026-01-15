@@ -28,7 +28,7 @@ public class ConexionDB {
             System.out.println("Error cargando config.properties");
             e.printStackTrace();
         }
-    }
+    }//unacontri
 
     public static Connection getConexion() {
         try {
